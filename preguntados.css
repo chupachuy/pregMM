@@ -1,0 +1,404 @@
+/*body{
+  background-color: #6dffff;
+}*/
+
+
+/*** ESTILOS TACOWEB START **/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500;700;900&display=swap');
+
+
+h1{
+  color: #fff;
+}
+
+.login-page{
+  background: rgb(63,93,136);
+  background: -moz-linear-gradient(0deg, rgba(63,93,136,1) 0%, rgba(87,123,175,1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(63,93,136,1) 0%, rgba(87,123,175,1) 100%);
+  background: linear-gradient(0deg, rgba(63,93,136,1) 0%, rgba(87,123,175,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5d88",endColorstr="#577baf",GradientType=1);
+}
+
+.login{
+  color: #fff;
+}
+
+.login a{
+  color: #fff;
+}
+
+.btn-primary{
+  color: #284b94;
+  font-weight: 700;
+  background: rgb(212,212,212);
+  background: -moz-linear-gradient(0deg, rgba(212,212,212,1) 0%, rgba(156,155,155,1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(212,212,212,1) 0%, rgba(156,155,155,1) 100%);
+  background: linear-gradient(0deg, rgba(212,212,212,1) 0%, rgba(156,155,155,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d4d4d4",endColorstr="#9c9b9b",GradientType=1);
+}
+
+.btn-primary:hover{
+  color: #284b94;
+  font-weight: 700;
+  background: rgb(156,155,155);
+  background: -moz-linear-gradient(0deg, rgba(156,155,155,1) 0%, rgba(212,212,212,1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(156,155,155,1) 0%, rgba(212,212,212,1) 100%);
+  background: linear-gradient(0deg, rgba(156,155,155,1) 0%, rgba(212,212,212,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9c9b9b",endColorstr="#d4d4d4",GradientType=1);
+}
+
+.button-submit .btn{
+  width: 100%;
+}
+
+.logo-login img{
+  width: 100%;
+}
+
+
+.login p{
+  margin-bottom: .4rem;
+}
+
+/* navbar font-family: 'Nasalization', sans-serif; */
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.75);
+    font-size: 1.1rem;
+}
+
+a.navbar-brand {
+  /*font-family: 'Nasalization', sans-serif;*/
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+.bg-dark{
+  background-color: #1C3C6D !important;;
+}
+
+
+/** PRINCIPAL **/
+
+.principal{
+  background-color: #055EA2;
+}
+
+.principal .btn{
+  margin-bottom: 1rem;
+}
+
+.img-avatar-principal{
+  text-align: center;
+}
+
+
+.img-avatar-principal img{
+  width: 80%;
+  margin: auto;
+  height: auto;
+}
+
+/** EVENTO **/
+
+.evento{
+  background-color: #055EA2;
+  color: #fff;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #284b94;
+    font-weight: 700;
+    background: rgb(212,212,212);
+    background: -moz-linear-gradient(0deg, rgba(212,212,212,1) 0%, rgba(156,155,155,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(212,212,212,1) 0%, rgba(156,155,155,1) 100%);
+    background: linear-gradient(0deg, rgba(212,212,212,1) 0%, rgba(156,155,155,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d4d4d4",endColorstr="#9c9b9b",GradientType=1);
+}
+
+.nav-link{
+  color: #fff;
+}
+
+/*** RANKING **/
+
+.ranking{
+  background-color: #055EA2;
+  color: #fff;
+}
+
+.table{
+  color: #fff;
+  padding: 10px;
+  margin-top: 2rem;
+}
+
+.dataTables_filter{
+  margin-top: 2rem;
+}
+
+.dataTables_filter input{
+    /*width: 100%;*/
+    margin-left: .5rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+.dataTables_length select{
+    /*width: 100%;*/
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e);
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.dataTables_paginate{
+  margin: .5rem auto;
+  text-align: center;
+
+}
+
+a.paginate_button{
+  margin-top: 1rem;
+  color: #284b94;
+  font-weight: 700;
+  background: rgb(212,212,212);
+  background: -moz-linear-gradient(0deg, rgba(212,212,212,1) 0%, rgba(156,155,155,1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(212,212,212,1) 0%, rgba(156,155,155,1) 100%);
+  background: linear-gradient(0deg, rgba(212,212,212,1) 0%, rgba(156,155,155,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d4d4d4",endColorstr="#9c9b9b",GradientType=1);
+  margin: .3rem;
+  padding: .5rem;
+  cursor: pointer;
+}
+
+
+/*** AvATAR ****/
+
+.avatar{
+  background-color: #055EA2;
+  color: #fff;
+}
+
+.menuavatar img{
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/*** RULETA ***/
+
+.panel-body-ruleta {
+    text-align: center;
+    margin-top: 2.6rem;
+}
+
+.resultado{
+  color: #fff;
+}
+
+
+/** RETAR CONAÑERO **/
+
+.retar-companero{
+  background-color: #055EA2;
+
+}
+
+/*** ESTILOS TACOWEB END **/
+
+.panel_p ruleta{
+  background-color: #055EA2;
+  color: #fff;
+}
+
+.bg-success1{
+  background-color: #F2F2F2;
+}
+
+strong{
+  font-size: 1.2em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.ingreso1{
+  margin-top: 0.5em;
+  font-size: 1.2em;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.jugadores{
+  font-size: 1.5em;
+  font-weight:bold;
+  font-family: 'Open Sans', sans-serif;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e1ffff+0,e1ffff+7,e1ffff+12,fdffff+12,e6f8fd+30,c8eefb+54,bee4f8+75,b1d8f5+100;Blue+Pipe+%232 */
+background: #e1ffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #e1ffff 0%, #e1ffff 7%, #e1ffff 12%, #fdffff 12%, #e6f8fd 30%, #c8eefb 54%, #bee4f8 75%, #b1d8f5 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#fdffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#fdffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1ffff', endColorstr='#b1d8f5',GradientType=0 ); /* IE6-9 */
+
+  border-radius: 10px;
+  color: #001689;
+  margin-top: 20px;
+  width: 100%;
+}
+.jugadores2{
+  font-size: 1.5em;
+  font-weight:bold;
+  font-family: 'Open Sans', sans-serif;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e1ffff+0,e1ffff+7,e1ffff+12,fdffff+12,e6f8fd+30,c8eefb+54,bee4f8+75,b1d8f5+100;Blue+Pipe+%232 */
+background: #e1ffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #e1ffff 0%, #e1ffff 7%, #e1ffff 12%, #fdffff 12%, #e6f8fd 30%, #c8eefb 54%, #bee4f8 75%, #b1d8f5 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#fdffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#fdffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1ffff', endColorstr='#b1d8f5',GradientType=0 ); /* IE6-9 */
+
+  border-radius: 10px;
+  color: #001689;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+
+.row button{
+  text-align: center;
+}
+
+
+
+.panel1 {
+  margin-bottom: 20px;
+  background-color: #fff;
+  /*border: 1px solid transparent;*/
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+#botonera{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 310px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.panel_p{
+  /*background-color: #6dffff;*/
+  padding: 15px;
+  background-color: #055EA2;
+  height: 100%;
+
+}
+.panel3 {
+  background-image: url('../img/escenario.png');
+  -moz-background-size: 100% 100%; /*Firefox 3.6*/
+  -o-background-size: 100% 100%; /*opera*/
+  -webkit-background-size: 100% 100%; /*Safari*/
+  background-size: 100% 100%; /*estandar css3*/
+  -moz-border-image: url('../img/escenario.png') 0; /*Firefox 3.5*/
+  height: 100%;
+  padding: 0px !important;
+}
+
+
+.panel4 {
+  background-image: url('../img/rank.png');
+  -moz-background-size: 100% 100%; /*Firefox 3.6*/
+  -o-background-size: 100% 100%; /*opera*/
+  -webkit-background-size: 100% 100%; /*Safari*/
+  background-size: 100% 100%; /*estandar css3*/
+  -moz-border-image: url('../img/rank.png') 0; /*Firefox 3.5*/
+  height: 100%;
+  padding: 0px !important;
+}
+
+.panel5 {
+  background-color: #055EA2;
+  height: 100%;
+  padding: 0px !important;
+}
+
+.panel6 {
+  background-image: url('../img/escenarioAvatar.png');
+  -moz-background-size: 100% 100%; /*Firefox 3.6*/
+  -o-background-size: 100% 100%; /*opera*/
+  -webkit-background-size: 100% 100%; /*Safari*/
+  background-size: 100% 100%; /*estandar css3*/
+  -moz-border-image: url('../img/escenarioAvatar.png') 0; /*Firefox 3.5*/
+  height: 100%;
+  padding: 0px !important;
+}
+
+.panel7 {
+  background-image: url('../img/escenarioEveto.png');
+  -moz-background-size: 100% 100%; /*Firefox 3.6*/
+  -o-background-size: 100% 100%; /*opera*/
+  -webkit-background-size: 100% 100%; /*Safari*/
+  background-size: 100% 100%; /*estandar css3*/
+  -moz-border-image: url('../img/escenarioEveto.png') 0; /*Firefox 3.5*/
+  height: 100%;
+  padding: 0px !important;
+}
+
+.panel7 h2{
+  color: #1d3a8e;
+}
+
+
+
+#menuAvatar li{
+  position: relative;
+  float: left;
+  padding: .5px;
+  list-style: none;
+}
+#menuAvatar li:hover{
+  transform: scale(1.2);
+
+}
+
+
+#resultado{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+}
+
+#countdown{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  color: #ff0000;
+}
+
+.superior {
+  width: 100%;
+  z-index: 100;
+}

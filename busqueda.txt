@@ -1,0 +1,296 @@
+<script>
+// Posicionar cuadro de búsqueda
+jQuery('#contArrow').hide();
+window.onscroll = function() {
+  var y = window.scrollY;
+  // console.log(y);
+  if( y > 500 ){
+   jQuery('#busIdGlo').addClass('busquedaGloFix');
+   jQuery('#busIdGlo').removeClass('busquedaGloNorm');
+  }else{
+   jQuery('#busIdGlo').removeClass('busquedaGloFix');
+   jQuery('#busIdGlo').addClass('busquedaGloNorm');
+  }
+};
+// Variables
+let conteoCoincidencias = 0;
+let varEncontrados = [];
+let conteo = 0;
+const arrTodasLetras = [];
+const arrIdEmentos = ["5774", "5777", "5779", "5780", "5781", "5782", "5783", "5784", "5785", "5786", "5787", "5788", "5789", "5790", "5791", "5792", "5793", "5794", "5795", "5796", "5797"];
+
+jQuery("#busq").keyup(function(event) {
+    if (event.keyCode === 13) {
+        jQuery("#btnBusc").click();
+    }
+});
+
+function fncBuscarPal(){
+  recaudarElementos();
+}
+// Función recaudar elementos
+function recaudarElementos(){
+ for (let i = arrTodasLetras.length; i > 0; i--) {
+  arrTodasLetras.pop();
+ }
+ for (let i = varEncontrados.length; i > 0; i--) {
+  varEncontrados.pop();
+ }
+ let varContLet = "";
+ if(jQuery('#busq').val() == ""){
+  jQuery('#contCoinc').html('Se debe escribir un término a buscar');
+  jQuery('#contArrow').hide();
+ }else{
+  for (let iIteraLet = 0; iIteraLet <= arrIdEmentos.length; iIteraLet++) {
+    const arrAlet = [];
+    for(let i = 1; i < (jQuery('#sp-ea-'+arrIdEmentos[iIteraLet]+' .ea-card .ea-header').length)+1; i++){
+     varContLet = jQuery('#sp-ea-'+arrIdEmentos[iIteraLet]+' .ea-card:nth-child('+i+') h3.ea-header a').html();
+     varContLet = varContLet.replace('<i class=\"ea-expand-icon fa fa-plus\"></i> ', "");
+     arrAlet.push(varContLet+'___'+arrIdEmentos[iIteraLet]);
+    }
+    arrTodasLetras.push(arrAlet);
+   }
+   compararElementos(arrTodasLetras);
+   //console.log(arrTodasLetras);
+  }
+}
+
+// Función comparar elementos
+function compararElementos(arrTodasLetras){
+  let terminoABuscar = jQuery('#busq').val();
+  let divTemp = "";
+  for(i = 0; i < arrTodasLetras.length; i++){
+    let numBusq = 0;
+    for(iNiv2 = 0; iNiv2 < arrTodasLetras[i].length; iNiv2++){
+      numBusq = iNiv2;
+      divTemp = arrTodasLetras[i][iNiv2].split('___');
+      // console.log(divTemp[0]+' - '+divTemp[1]);
+      terminoABuscar = removerAcentos(terminoABuscar);
+      let divTempVar = removerAcentos(divTemp[0]);
+      divTempVar = divTempVar.toLowerCase();
+      terminoABuscar = terminoABuscar.toLowerCase();
+      let encontro = divTempVar.search(terminoABuscar);
+      if ( encontro > -1 ) {
+       varEncontrados.push('#collapse'+divTemp[1]+numBusq);
+      }
+    }
+  }
+  //console.log( varEncontrados );
+  conteoCoincidencias = 1;
+  fncSiguienteCoin(conteoCoincidencias, varEncontrados);
+}
+// Quitar acentos
+const removerAcentos = (str) => {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+} 
+
+// Función llevar a elemento
+function fncSiguienteCoin(conteo = conteo, varEncontrados = varEncontrados){
+  if(conteoCoincidencias < varEncontrados.length) {
+    conteoCoincidencias = conteo + 1;
+  }else{
+    conteoCoincidencias = 1;
+  }
+  if (varEncontrados.length < 1) {
+    jQuery('#contCoinc').html('No se encontraron coincidencias');
+    jQuery('#contArrow').hide();
+  }else{
+    jQuery('#contArrow').show();
+    jQuery('#contCoinc').show();
+    jQuery('#contCoinc').html(' '+conteo+' / '+varEncontrados.length+' ');
+    let indiceVarEncontrados = conteo - 1;
+    let targetElm = document.querySelector('[data-sptarget="'+varEncontrados[indiceVarEncontrados]+'"]');
+    let quitarClass = document.getElementsByClassName('sombraRes');
+    for (let iRemClass = 0; iRemClass<quitarClass.length; iRemClass++) {
+       quitarClass[iRemClass].classList.remove("sombraRes");
+    }
+    targetElm.parentNode.classList.add('sombraRes');
+    targetElm.scrollIntoView({behavior: "smooth"});
+    //console.log(targetElm);
+    //console.log(conteo);
+    //console.log(indiceVarEncontrados);
+    //console.log(varEncontrados);
+    let yEncontr = window.scrollY;
+    //console.log(yEncontr);
+  }
+}
+
+// Input vacío
+busq.oninput = function() {
+  if( jQuery('#busq').val() == '' ){
+    jQuery('#contArrow').hide();
+    jQuery('#contCoinc').hide();
+    let quitarClass = document.getElementsByClassName('sombraRes');
+    for (let iRemClass = 0; iRemClass<quitarClass.length; iRemClass++) {
+       quitarClass[iRemClass].classList.remove("sombraRes");
+    }
+  }
+};
+</script>
+
+
+
+
+
+
+
+
+
+
+________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+<style>
+#busIdGlo{
+ z-index: 2000;
+ background-color: #00c1b5;
+}
+.recBusq{
+ width: 100% !important;
+}
+.busquedaGloFix{
+ position: fixed;
+ top: 0;
+ right: 1em;
+ background-color: #FFF;
+ padding: 1em;
+ display: block;
+ -webkit-box-shadow: 0px 2px 25px -4px rgba(0,0,0,0.75);
+ -moz-box-shadow: 0px 2px 25px -4px rgba(0,0,0,0.75);
+ box-shadow: 0px 2px 25px -4px rgba(0,0,0,0.75);
+}
+.busquedaGloNorm{
+ position:absolute;
+ right: 2em;
+ background-color: #FFF;
+ padding: 1em;
+ display: inline-block;
+}
+#btnBusc{
+ background-color: transparent;
+ color: #FFF;
+ cursor: pointer;
+ border-width: 0;
+ border-style: outset;
+ border-color: transparent;
+}
+#btnBusc:hover{
+ background-color: rgba(256, 256, 256, 0.2);
+}
+#btnBusc:focus{
+ border: transparent;
+ outline: none;
+}
+#contArrow{
+ background-color: transparent;
+ color: #FFF;
+ cursor: pointer;
+ border-width: 0;
+ border-style: outset;
+ border-color: transparent;
+ font-weight: bold;
+}
+#contArrow:hover{
+ background-color: rgba(256, 256, 256, 0.2);
+}
+#contArrow:focus{
+ border: transparent;
+ outline: none;
+}
+#busq{
+ min-width: 20em;
+ background-color: transparent;
+ border: transparent;
+ border-bottom: 1px solid #FFF;
+ color: #FFF;
+ font-weight: bold;
+}
+#busq:focus{
+ border-bottom: 1px solid #FFF;
+ outline: none;
+}
+#busq::placeholder{
+ color: rgba(256, 256, 256, 0.7);
+}
+#contCoinc{
+ color: #fcd116;
+ font-weight: bold;
+ margin: auto .5em auto .5em;
+}
+.sombraRes{
+border: solid #FFF 3px;
+  -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+<style>
+.redEspLet{
+line-height:.5 !important;
+margin-top: 1em;
+}
+.sp-ea-one.sp-easy-accordion .sp-ea-single .ea-header a{
+padding: 6px 15px;}
+.sp-easy-accordion .sp-ea-single .ea-header a{
+font-size: .6em !important;
+}
+</style>
+<script>
+jQuery('.ez-toc-container').hide();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="busIdGlo" class="busquedaGloNorm">
+  <div class="recBusq">
+   <input id="busq" placeholder="Busca un término del glosario"></input>
+   <span id="contCoinc"></span>
+   <button id="contArrow" onclick="fncSiguienteCoin(conteoCoincidencias, varEncontrados)"><i class="fa fa-angle-down"></i></button>
+   <button id="btnBusc" onclick="fncBuscarPal()"><i class="fa fa-search"></i></button>
+  </div>
+</div>

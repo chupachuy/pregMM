@@ -1,0 +1,289 @@
+.createavatar{
+    background-color: #055EA2;
+}
+
+.opciones-envolve{
+    background-color: rgb(255,255,255, .5);
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.panel {
+    background-image: url('../img/escenario.png');
+    -moz-background-size: 100% 100%; /*Firefox 3.6*/
+    -o-background-size: 100% 100%; /*opera*/
+    -webkit-background-size: 100% 100%; /*Safari*/
+    background-size: 100% 100%; /*estandar css3*/
+    -moz-border-image: url('../img/escenario.png') 0; /*Firefox 3.5*/
+    height: 100%;
+    padding: 0px !important;
+  }
+
+#draw{
+	padding: 0;
+	margin:0;
+	bottom: 120px;
+	left: 90px;
+	width:220px;
+	height: 300px;
+	background-size: 100%;/*escala la imagen al tamaño del div*/
+	/*position: absolute;*/
+    transform: scale(1);
+}
+#mensaje{
+    position: absolute;
+    width: 1024px;
+    height: 650px;
+    padding: 0;
+	margin:0;
+    background-color: rgba(41, 171, 226, 0.6);
+    font-size: 22px;
+    z-index: 6;
+    opacity: 0;
+}
+#texto{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0px 10px;
+    width: 280px;
+    height: 140px;
+    border-radius: 20px;
+    border: 4px solid #1C4B9D ;
+    top: 70px;
+    left: 60px;
+}
+#ventana{
+    width: 400px;
+    height: 270px;
+    position: relative;
+    margin: 0px auto;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    top: 180px;
+    padding: 20px;
+}
+#cerrar{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding: 2px;
+    position:absolute;
+    bottom: 10px;
+    right: 260px;
+    cursor: pointer;
+}
+#d01,#d02,#d03,#d04,#d05{/* divs avatar */
+	width:300px;
+	height: 411px;	
+	margin: 0;
+	padding: 0;
+	background-image: url("");
+	background-size: 100%;/*escala la imagen al tamaño del div*/
+	position: absolute;
+	top: 0px;
+	left: 70px;
+
+}
+#d01{/* Genero /color de piel */
+	z-index: 3;
+}
+#d02{/* peinado / color cabello */
+	z-index: 7;
+	
+}
+#d03{/* vestuario */
+	z-index: 6;
+	
+}
+#d04{
+	z-index: 4;
+	
+}
+
+#d05{
+	z-index: 10;
+	
+}
+form{
+    width: 290px;
+    position: absolute;
+    top: 175px;
+    left: 85px;
+    font-size: 20px;
+}
+#opciones{
+
+	/*position: relative;
+	width: 600px;
+	height: 380px;*/
+	/*border: 1px dashed red;*/
+	border-radius: 15px;
+	/*margin: 30px 30px 30px 330px ;
+	padding: 0;
+	top: 130px;
+	right: -70px;*/
+}
+
+#opcionesH, #opcionesM{
+    overflow-y: scroll;
+    height: 300px;
+	/*position: absolute;
+    width: 600px;
+	top: 300px;
+	right: 0px;*/
+	/*border: 1px dashed blue;*/
+	display: none;
+}
+
+.vestidos{
+	margin: 0;
+	padding: 0;
+	width: 160px;
+	height: 220px;
+	cursor:pointer;	
+}
+#genero{
+    text-align: center;
+	/*border: 1px solid black;*/
+}
+h4{
+	margin:0;
+	padding: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+	text-align:center;
+	color: black;
+}
+#piel{
+    width: 100%;
+	margin: 0px;
+	padding: 0px;
+    /*margin-left: 170px;
+	border: 1px solid black;*/
+    cursor: pointer;
+}
+
+#piel img{
+    margin: 0 auto;
+}
+
+
+
+#peinado{
+    width: 100%;
+	margin: 0px;
+	padding: 0px;
+	/*margin-left: 130px;*/
+    cursor: pointer;
+	/*border: 1px solid black;*/
+}
+
+#peinado img{
+    margin: 0 auto;
+}
+
+#colorCabello{
+    width: 100%;
+	margin: 0px;
+	padding: 0px;
+	/*margin-left: 102px;*/
+    cursor: pointer;
+	/*border: 1px solid black;*/
+}
+
+#colorCabello img{
+    margin: 5px auto;
+}
+
+
+#vestuario{
+    margin-top:-40px;
+    margin-left:-60px;
+    transform: scale(.8);
+    cursor: pointer;
+}
+.fin{
+	/*border: 1px solid black;*/
+	/*visibility: hidden;*/
+    margin: 0px;
+	padding: 0px;
+}
+#guardar, #hombre, #mujer{
+    /*width: 100px;
+    height: 30px;
+    border: 0px;
+    float: left;
+    background-color: #E8913A;
+    border: 1px solid #fff;
+    color: #FFF;
+    cursor: pointer;*/
+}
+#guardar{
+    margin-top:10px;
+}
+
+#ins1{
+    position: absolute;
+    left: 870px;
+    top:565px;
+    height: 110px;
+    width: 95px;
+    z-index:10;
+    } 
+
+#ins2{
+      position: absolute;
+    left: 830px;
+    top:550px;
+    width: 65px;
+    z-index:10;
+    }
+
+.zone{
+position: absolute;
+width: 100px;
+font-size: 16px;
+text-align: center;
+top: 20px;
+font-weight: 800;
+line-height: 20px;
+}
+
+#area1{
+left: 30px;
+}
+
+#area2{
+left: 195px;
+}
+
+#area3{
+left: 360px;
+}
+
+#area4{
+left: 520px;
+}
+
+
+@media only screen and (max-width: 595px) {
+
+    #colorCabello img {
+    margin: 5px auto;
+    width: 70px;
+    }
+
+    #peinado img{
+        width: 70px;
+    }
+
+    #d01, #d02, #d03, #d04, #d05 {
+
+        left: 40px;
+    }
+
+    strong{
+        font-size: .9em;
+    }
+
+}

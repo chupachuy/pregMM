@@ -1,0 +1,7 @@
+[18-Apr-2023 14:40:12 UTC] PHP Warning:  unlink(../../img/img/prop01b.png): No such file or directory in /home/oexlcom/public_html/beta/preguntados/admin/procesos/recibirEliminacionPregunta.php on line 12
+[19-Apr-2023 19:40:52 UTC] PHP Warning:  unlink(../../img/img/logo_int_80.png): No such file or directory in /home/oexlcom/public_html/beta/preguntados/admin/procesos/recibirEliminacionPregunta.php on line 12
+[19-Apr-2023 19:40:58 UTC] PHP Warning:  unlink(../../img/img/logo_int_80.png): No such file or directory in /home/oexlcom/public_html/beta/preguntados/admin/procesos/recibirEliminacionPregunta.php on line 12
+[19-Apr-2023 19:41:16 UTC] PHP Warning:  unlink(../../img/img/prop01b.png): No such file or directory in /home/oexlcom/public_html/beta/preguntados/admin/procesos/recibirEliminacionPregunta.php on line 12
+[19-Apr-2023 19:44:10 UTC] PHP Warning:  unlink(../../img/img/logo_int_80.png): No such file or directory in /home/oexlcom/public_html/beta/preguntados/admin/procesos/recibirEliminacionPregunta.php on line 12
+[19-Apr-2023 19:47:44 UTC] PHP Warning:  unlink(../../img/img/prop01b.png): No such file or directory in /home/oexlcom/public_html/beta/preguntados/admin/procesos/recibirEliminacionPregunta.php on line 12
+[19-Apr-2023 19:47:55 UTC] PHP Warning:  unlink(../../img/img/prop01b.png): No such file or directory in /home/oexlcom/public_html/beta/preguntados/admin/procesos/recibirEliminacionPregunta.php on line 12
